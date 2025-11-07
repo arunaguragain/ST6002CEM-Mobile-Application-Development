@@ -74,4 +74,7 @@ void main() {
     department: "XYZ",
     salary: 120000,
   );
+
+  print(fullTimeFaculty.displayName());
+  print(fullTimeFaculty.calculateAnnualSalary());
 }
