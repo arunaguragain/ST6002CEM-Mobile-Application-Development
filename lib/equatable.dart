@@ -83,6 +83,10 @@ void main() {
   Vehicle v1 = Vehicle("car", 4);
   Vehicle v2 = Vehicle("car", 4);
   print(v1 == v2);
+
+  Animal cow = Animal("cow", "Domestic");
+  Animal ox = Animal("cow", "Domestic");
+  print(cow == ox);
 }
 
 class Vehicle extends Equatable {
@@ -96,15 +100,13 @@ class Vehicle extends Equatable {
   List<Object?> get props => [name, noOfWheels];
 }
 
-
 class Animal extends Equatable {
   String name;
   String type;
 
   Animal(this.name, this.type);
-  
+
   @override
   // TODO: implement props
   List<Object?> get props => [name, type];
-  
 }
